@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
+import Task from './Task'
 
 const styles = {
   outer: { paddingTop: 32, paddingLeft: 10, paddingRight: 10 },
@@ -21,16 +22,7 @@ function TaskList({ data: { loading, tasks } }) {
       <View style={styles.outer}>
         <Text>Tasks</Text>
         {(tasks || []).sort((x, y) => y.id - x.id).map(task => (
-          <View key={task.id} style={styles.wrapper}>
-            <View>
-              <Text style={styles.header}>{task.name}</Text>
-              <Text>{task.state}</Text>
-              <Text>{task.priority}</Text>
-              <View style={styles.subtextWrapper}>
-                <Text>{task.content}</Text>
-              </View>
-            </View>
-          </View>
+          <Task task={task} />
         ))}
       </View>
     );
