@@ -4,7 +4,7 @@ import gql from 'graphql-tag';
 import { Mutation } from "react-apollo";
 
 const styles = {
-  wrapper: { marginBottom: 15, flex: 1, flexDirection: 'row' },
+  wrapper: { userSelect: "none", padding: 10, marginBottom: 15, flex: 1, flexDirection: 'row', backgroundColor: '#EEE' },
   header: { fontSize: 20 },
   subtextWrapper: { margin: 10, flex: 1, flexDirection: 'row' },
 }
