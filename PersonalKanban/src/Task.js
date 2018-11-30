@@ -37,15 +37,13 @@ const Task = ({ task }) =>
   <Mutation mutation={COMPLETE_TASK}>
     {(setState) =>
       <View key={task.id} style={styles.wrapper}>
-        <View>
-          <Text style={styles.header}>{task.name}</Text>
-          <Text style={stateStyle(task.state)}>{task.state}</Text>
-          <Text>{task.priority}</Text>
-          <View style={styles.subtextWrapper}>
-            <Text>{task.content}</Text>
-          </View>
-          <Button onPress={() => setState({ variables: { id: task.id, state: "DONE" } })} title="Complete Task" />
+        <Text style={styles.header}>{task.name}</Text>
+        <Text style={stateStyle(task.state)}>{task.state}</Text>
+        <Text>{task.priority}</Text>
+        <View style={styles.subtextWrapper}>
+          <Text>{task.content}</Text>
         </View>
+        <Button onPress={() => setState({ variables: { id: task.id, state: "DONE" } })} title="Complete Task" />
       </View>
     }
   </Mutation>;
