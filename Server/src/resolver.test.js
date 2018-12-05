@@ -4,7 +4,6 @@ import { print } from 'graphql/language/printer';
 
 import { makeExecutableSchema } from 'graphql-tools';
 import { graphql } from 'graphql';
-import { GraphQLError } from 'graphql/error';
 
 import typeDefs from '../src/schema';
 import resolvers from '../src/resolvers';

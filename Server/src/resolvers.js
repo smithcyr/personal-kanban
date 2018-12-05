@@ -1,5 +1,3 @@
-import { keyBy, isEqual, difference } from 'lodash/fp';
-
 export default {
   Query: {
     task: (_rootValue, { id }, context) => {
